@@ -14,7 +14,7 @@ while (username !== "admin" || pass !== "12345") {
         alert("Đăng nhập thành công!");
 
         do {
-            choice = Number(prompt("1. Phân loại mã số sách (Số nguyên chẵn/lẻ). \n2. Thiết kế bản đồ kho sách (Dạng lưới). \n3. Dự toán phí bảo trì sách theo năm. \n4. Tìm mã số sách may mắn. \n5. Thoát. \nMời bạn chọn chức năng:"));
+            choice = Number(prompt("1. Phân loại mã số sách (Số nguyên chẵn/lẻ). \n2. Thiết kế bản đồ kho sách (Dạng lưới). \n3. Dự toán phí bảo trì sách theo năm. \n4. Tìm mã số sách may mắn. \n5. Thoát. \nVui lòng nhập lựa chọn của bạn (1-5):"));
             switch (choice) {
                 case 1:
                     let bookId;
@@ -53,20 +53,22 @@ while (username !== "admin" || pass !== "12345") {
                     }
                     console.log(`--- Bản đồ kho sách (${row}x${col}) ---`);
                     for(let hang=1;hang<=row;hang++){
+                        let result="";
                         for(let cot=1;cot<=col;cot++){
                             let note="";
                             if(hang===cot){
                                 note="Kệ ưu tiên";
                             }
-                            console.log(`[${hang}-${cot}](${note})`);
+                            result+="[" + hang + "-" + cot + "]" + "(" + note + ")" + " ";
                         }
+                        console.log(result);
                     }
                     alert(`Đã in bản đồ kho ra Console (F12).`);
                     break;
                 case 3:
-                    let totalBooks = Number(prompt("Nhập số lượng sách hiện có:"));
-                    let fee = Number(prompt("Nhập phí bảo trì cho 1 cuốn (VNĐ)::"));
-                    let years = Number(prompt("Nhập số năm dự toán:"));
+                    let totalBooks = parseInt((prompt("Nhập số lượng sách hiện có:")));
+                    let fee = parseFloat(prompt("Nhập phí bảo trì cho 1 cuốn (VNĐ):").trim());
+                    let years = parseInt(prompt("Nhập số năm dự toán:"));
 
                     if (!Number.isInteger(totalBooks) || totalBooks <= 0 || !Number.isInteger(years) || years <= 0 || fee <= 0) {
                         alert(`Dữ liệu không hợp lệ!`);
@@ -94,8 +96,8 @@ while (username !== "admin" || pass !== "12345") {
                         console.log(`--- Danh sách mã sách may mắn (Bội số của 3, không chia hết cho 5) ---`);
 
                         let result="";
-                        for (let i = 1; i <= N; i++) {
-                            if (i % 3 === 0 && i % 5 !== 0) {
+                        for (let i=1;i<=N;i++) {
+                            if (i%3===0 && i% 5!==0) {
                                 result+=i+" ";
                                 count++;
                             }
