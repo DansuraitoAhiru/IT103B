@@ -42,9 +42,7 @@ Vui lòng chọn (1-7):`));
             case 1:
                 let newBook=prompt("Nhập danh sách tên sách (cách nhau bởi dấu phẩy):");
                 let list=newBook.split(",");
-                for(let i=0;i<list.length;i++){
-                    libraries.push(list[i].trim());
-                }
+                libraries=libraries.concat(list);
                 alert(`Đã thêm ${list.length} sách vào kho`);
                 break;
             case 2:
@@ -55,9 +53,25 @@ Vui lòng chọn (1-7):`));
                 }
                 break;
             case 3:
-
+                let search=prompt("Nhập tên sách muốn tìm:");
+                let index=libraries.indexOf(search);
+                if(index===-1){
+                    alert(`Ko tìm thấy sách ${search}`)
+                } else {
+                    alert(`Sách ${search} được tìm thấy tại vị trí ${index}`);
+                    console.log(`Sách ${search} được tìm thấy tại vị trí ${index}`)
+                }
                 break;
             case 4:
+                let change=prompt("Nhập tên sách cần sửa:");
+                let found=libraries.indexOf(change);
+                if(found===-2){
+                    alert(`Ko tìm thấy sách ${change}`)
+                } else {
+                    let newName=prompt(`Tìm thấy sách ${change}. Nhập tên mới:`);
+                    libraries[found]=newName;
+                    alert(`Cập nhật thành công!`);
+                }
                 break;
             case 5:
                 libraries.reverse();
@@ -68,6 +82,9 @@ Vui lòng chọn (1-7):`));
                 }
                 break;
             case 6:
+                let other=["Sách Kỹ Năng", "Truyện Tranh"];
+                libraries=libraries.concat(other);
+                alert(`Đã gộp kho sách từ chi nhánh khác thành công.`)
                 break;
             case 7:
                 alert(`Hẹn gặp lại!`);
@@ -77,5 +94,4 @@ Vui lòng chọn (1-7):`));
                 break;
         }
     } while(choice!==7);
-
 }
