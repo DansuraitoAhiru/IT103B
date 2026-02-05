@@ -22,8 +22,8 @@ while(count<max){
     } else if(pass !== "12345"){
         alert(`Sai mật khẩu! Bạn còn ${max-count} lần`);
     }
-
 }
+
 if(count === max){
     alert(`Tài khoản bị khóa! Hết cứu!`);
 } else {
@@ -47,7 +47,7 @@ Vui lòng chọn (1-7):`));
                 break;
             case 2:
                 alert(`Danh sách đã được in ra console (F12).`);
-                console.log(`--- DANH SÁCH SÁCH HIỆN CÓ ---`)
+                console.log(`--- DANH SÁCH SÁCH HIỆN CÓ ---`);
                 for(let i=0;i<libraries.length;i++){
                     console.log(`${i+1}. ${libraries[i]}`);
                 }
@@ -56,7 +56,7 @@ Vui lòng chọn (1-7):`));
                 let search=prompt("Nhập tên sách muốn tìm:");
                 let index=libraries.indexOf(search);
                 if(index===-1){
-                    alert(`Ko tìm thấy sách ${search}`)
+                    alert(`Ko tìm thấy sách ${search}`);
                 } else {
                     alert(`Sách ${search} được tìm thấy tại vị trí ${index}`);
                     console.log(`Sách ${search} được tìm thấy tại vị trí ${index}`)
@@ -65,8 +65,8 @@ Vui lòng chọn (1-7):`));
             case 4:
                 let change=prompt("Nhập tên sách cần sửa:");
                 let found=libraries.indexOf(change);
-                if(found===-2){
-                    alert(`Ko tìm thấy sách ${change}`)
+                if(found===-1){
+                    alert(`Ko tìm thấy sách ${change}`);
                 } else {
                     let newName=prompt(`Tìm thấy sách ${change}. Nhập tên mới:`);
                     libraries[found]=newName;
