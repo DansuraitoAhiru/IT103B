@@ -6,16 +6,12 @@ let students = [
   { id: 5, name: "Hoàng Văn E", score: 3.8, gender: "Nam" }
 ];
 
-const largeThan8=(student) => {
-    const found=student.filter((student) => student.score >= 8.0);
-    found.forEach((ele) => {
-        console.log(ele.name);
-    });
-};
-largeThan8(students);
+const largeThan8=students.filter((student) => student.score >= 8.0);
+console.log(largeThan8);
 
 const smallerThan4=students.some((element) => element.score < 4.0);
 console.log(`${smallerThan4 ? "Có sinh viên yếu" : "Không có sinh viên yếu"}`);
 
 const studentsLabels=students.map((value) => `Tên: [${value.name}] - Điểm: [${value.score}]`);
+
 console.log(studentsLabels);
