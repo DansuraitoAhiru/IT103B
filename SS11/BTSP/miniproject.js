@@ -108,7 +108,7 @@ ID: ${students[index].id} | Name: ${students[index].name} | Age: ${students[inde
             
 Type "yes" to confirm:`).trim();
         if(confirm && confirm.toLowerCase() === "yes"){
-            students=students.filter((s) => s.id !== id);
+            students.splice(index,1);
             alert(`Student "${removed.name}" has been deleted!`);
         } else {
             alert(`Deletion cancelled!`);
@@ -208,4 +208,4 @@ Enter your choice:`);
             alert(`Invalid choice! Please enter a number from 0 to 8.`);
             break;
     }
-} while (choice != 0);
+} while (choice !== 0);
