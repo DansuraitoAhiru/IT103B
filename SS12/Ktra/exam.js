@@ -15,6 +15,7 @@ const list=largerThan5.map((s) => `${s.name}`);
 console.log(list);
 
 const men = students.filter(student => student.gender === "Nam");
-const sum = men.reduce((sum, student) => sum + student.score, 0);
+const sum = men.reduce((s, student) => s + student.score, 0);
 const avg = sum/men.length;
 console.log(avg.toFixed(1));
+
