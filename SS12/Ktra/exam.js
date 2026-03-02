@@ -14,6 +14,7 @@ const largerThan5=students.filter((student) => student.score>=5.0);
 const list=largerThan5.map((s) => `${s.name}`);
 console.log(list);
 
-const men=students.filter((student) => student.gender==="Nam");
-const avg=men.reduce((prev, curr) => (prev+curr.score)/men.length, 0);
-console.log(`${avg.toFixed(2)}`);
+const men = students.filter(student => student.gender === "Nam");
+const sum = men.reduce((sum, student) => sum + student.score, 0);
+const avg = sum/men.length;
+console.log(avg.toFixed(1));
