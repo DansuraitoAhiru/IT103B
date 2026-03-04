@@ -1,0 +1,11 @@
+.content {
+    color: aqua;
+    font-weight: 200px;
+    line-height: 30px;
+    border-radius: 30px;
+}
+
+.color {
+    background-color: bisque;
+    color: aliceblue;
+}
