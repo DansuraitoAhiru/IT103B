@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F8F1E6;
+    padding: 20px 30px;
+}
+
+header {
+    background-color: rgb(205, 48, 48);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    font-size: 30px;
+}
+
+header p {
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+.container {
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 30px;
+}
+
+.task {
+    display:flex;
+    align-items:center;
+    padding:25px;
+    margin:15px 0;
+    border-left:5px solid orange;
+    background:#FFFEE7;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.task .text {
+    margin-left: 10px;
+    font-size: 27px;
+}
+
+.task.done {
+    background:#d9e7dc;
+    border-left:5px solid green;
+    text-decoration: line-through;
+    color:#555;
+}
+
+.icon {
+    margin-right:10px;
+}
+
+.circle {
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    border:2px solid gray;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.task.done .circle {
+    background:green;
+    color:white;
+    border:none;
+}
+
+.task.done .text{
+    text-decoration:line-through;
+    color:#555;
+    margin-left: 10px;
+}
+
+#addTask {
+    background-color: #FFFEE7;
+    padding:25px;
+    margin: 0;
+}
+
+#taskInput {
+    width: 1200px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 27px;
+}
+
+#taskInput {
+    padding-left: 10px;
+    border: 1px solid gray;
+}
+
+#addBtn {
+    background-color: orange;
+    width: 120px;
+    height: 60px;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid grey;
+    margin-left: 10px;
+    font-size: 27px;
+}
+
+#addBtn:hover {
+    background-color: rgb(188, 141, 31);
+}
+
+.container hr {
+    opacity: 0.3;
+    margin-top: 60px;
+}
+
+#footer {
+    text-align: center;
+    opacity: 0.6;
+    font-size: 26px;
+    margin-top: 30px;
+}
