@@ -53,12 +53,6 @@ const addTask=() => {
         alert("Tên sản phẩm phải có ít nhất 3 ký tự!");
         return;
     }
-
-    if(Number(price) <= 0){
-        alert("Giá sản phẩm phải lớn hơn 0!");
-        return;
-    }
-
     const newProduct = {
         stt: nextStt++,
         id,
