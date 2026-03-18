@@ -338,10 +338,6 @@ h2 {
   line-height: 1.35;
 }
 
-.hidden {
-  display: none !important;
-}
-
 .table-wrap {
   overflow-x: auto;
   border: 1px solid #e5e7eb;
