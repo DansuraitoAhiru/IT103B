@@ -1,4 +1,4 @@
-const users = [
+let users = [
   {id:1,name:"Nguyễn Văn An",phone:"0901234567",email:"nguyenvanan@email.com"},
   {id:2,name:"Trần Thị Bình",phone:"0912345678",email:"tranthibinh@email.com"},
   {id:3,name:"Lê Văn Cường",phone:"0923456789",email:"levancuong@email.com"},
@@ -11,8 +11,7 @@ let idUpdate=null;
 const form=document.querySelector("#contact-form");
 const contactBody=document.querySelector("#contact-tbody");
 const btnSubmit=document.querySelector(".btn-add");
-const btnEdit=document.querySelector(".btn-edit");
-const btnDelete=document.querySelector(".btn-delete");
+
 const nameInput = document.querySelector("#contact-name");
 const phoneInput = document.querySelector("#contact-phone");
 const emailInput = document.querySelector("#contact-email");
@@ -27,7 +26,7 @@ const render = (users) => {
                     <td>${user.email}</td>
                     <td>
                         <button class="btn-edit" onclick="edit(${user.id})">Sửa</button>
-                        <button class="btn-delete" onclick="removeUser(${user.id})">Xóa</button>
+                        <button class="btn-delete" onclick="remove(${user.id})">Xóa</button>
                     </td>
                 </tr>`;
     });
@@ -81,7 +80,5 @@ const remove=(id) => {
 
     render(users);
 };
-
-btnDelete.addEventListener("click", remove);
 
 render(users);
