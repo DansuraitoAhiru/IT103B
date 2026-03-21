@@ -5,7 +5,6 @@ const items = menu.querySelectorAll("div"); // lấy các lựa chọn trong men
 let theme; // biến lưu theme
 
 const applyTheme = (theme) => {
-
   if (theme === "dark") {
     document.documentElement.classList.add("dark"); // thêm class dark vào <html>
   } else if (theme === "light") {
