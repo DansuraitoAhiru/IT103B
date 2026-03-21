@@ -5,13 +5,10 @@ const items = menu.querySelectorAll("div"); // lấy tất cả các item (mỗi
 let theme; // biến lưu theme hiện tại
 
 const applyTheme = (theme) => {
-
   if (theme === "dark") {
     document.documentElement.classList.add("dark"); // bật dark mode bằng cách thêm class vào <html>
-
   } else if (theme === "light") {
     document.documentElement.classList.remove("dark");  // xóa class dark đê
-
   } else {
     const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;  // kiểm tra hệ điều hành đang dùng dark ko
 
