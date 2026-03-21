@@ -32,7 +32,7 @@ const applyTheme = (theme) => {
 
 
 
-// KHI TRANG VỪA LOAD
+// Khi trang load
 try {
   theme = localStorage.getItem("theme");  // đọc theme đã lưu từ localStorage
 } catch (e) {
@@ -46,14 +46,14 @@ applyTheme(theme);
 
 
 
-// CLICK NÚT ICON → MỞ / ĐÓNG MENU
+// Xử lí việc click nút icon sẽ mở/đóng menu
 btn.addEventListener("click", () => {
   menu.classList.toggle("show");
 });
 
 
 
-// KHI CHỌN 1 ITEM TRONG MENU
+// Khi chọn 1 item trong menu
 items.forEach((item) => {
   item.addEventListener("click", () => {
     const newTheme = item.getAttribute("value");  // lấy giá trị theme (light / dark / auto)
