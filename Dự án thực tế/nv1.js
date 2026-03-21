@@ -56,7 +56,7 @@ btn.addEventListener("click", () => {
 // Khi chọn 1 item trong menu
 items.forEach((item) => {
   item.addEventListener("click", () => {
-    const newTheme = item.getAttribute("value");  // lấy giá trị theme (light / dark / auto)
+    const newTheme = item.getAttribute("value");  // đặt thêm biển newTheme để lấy giá trị theme (light / dark / auto) mới
     // áp dụng theme
     applyTheme(newTheme);
 
