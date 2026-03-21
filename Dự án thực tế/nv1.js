@@ -63,7 +63,6 @@ items.forEach((item) => {
 document.addEventListener("click", (e) => {
   // nếu click không nằm trong dropdown
   if (!e.target.closest(".dropdown")) {
-    // nếu click không nằm trong dropdown
     menu.style.display = "none";
   }
 });
