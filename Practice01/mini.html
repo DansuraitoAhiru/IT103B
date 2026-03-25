@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Mini</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="mini.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2 id="formTitle">🎵 Thêm bài hát</h2>
+
+    <form class="form">
+        <input type="text" id="title" placeholder="Tên bài hát">
+        <input type="text" id="artist" placeholder="Ca sĩ">
+        <button id="submitBtn">Thêm</button>
+    </form>
+
+    <input type="text" id="search" placeholder="🔍 Tìm theo tên bài hát..." oninput="searchSong()">
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên bài hát</th>
+                <th>Ca sĩ</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="songTable"></tbody>
+    </table>
+    <div class="empty-state" id="emptyState" style="display: none;">
+            <div class="empty-state-icon">📦</div>
+            <div class="empty-state-text">Không có bài nào cả!</div>
+    </div>
+
+</div>
+
+<script src="mini.js"></script>
+</body>
+</html>
