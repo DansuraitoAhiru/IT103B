@@ -116,7 +116,7 @@ form.addEventListener("submit", (e) => {
 
         songs.push(newSong);
         Swal.fire({
-            title: "Thêm Thành công một sản phẩm",
+            title: "Thêm Thành công một bài hát",
             text: "Click để bỏ qua!",
             icon: "success"
         });
@@ -175,7 +175,7 @@ const deleteSong=(id) => {
 
             Swal.fire({
                 title: "Đã xóa!",
-                text: "Sản phẩm đã bị xóa.",
+                text: "Bài hát đã bị xóa.",
                 icon: "success"
             });
         }
