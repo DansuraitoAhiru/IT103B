@@ -10,10 +10,7 @@ const container = document.getElementById("toast-container");  // Lấy ra thẻ
 const MAX_TOAST = 6; // giới hạn số lượng ô
 
 const createToast=(type) => {
-     if (!toasts[type]) {
-        console.warn("Type không hợp lệ:", type);
-        return;
-    }
+     if (!toasts[type]) return;
 
     if (!container) return;
 
